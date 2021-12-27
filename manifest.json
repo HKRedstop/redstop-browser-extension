@@ -1,0 +1,95 @@
+{
+	"manifest_version": 2,
+
+	"name": "共業Redstop",
+	"description": "透過「共業Redstop」檢查網頁",
+	"version": "2.2",
+	"author": "nt Redize",
+
+	"icons": {
+		"16": "images/logo/logo-16.png",
+    "48": "images/logo/logo-48.png",
+		"96": "images/logo/logo-96.png",
+    "128": "images/logo/logo-128.png"
+	},
+
+	"permissions": [
+    "tabs",
+		"storage",
+    "https://api.redstop.info/*",
+    "https://image.redstop.info/*"
+  ],
+
+	"browser_action": {
+		"default_icon": {
+      "16": "images/logo/logo-16.png",
+      "24": "images/logo/logo-24.png",
+      "32": "images/logo/logo-32.png"
+    },
+    "default_title": "共業Redstop",
+		"default_popup": "app/popup/popup.html"
+	},
+
+	"options_ui": {
+    "page": "app/option/option.html",
+		"open_in_tab": true
+	},
+
+	"background": {
+		"persistent": true,
+		"scripts": [
+			"constants/storage-key.js",
+			"constants/connection-port.js",
+			"constants/browser-message.js",
+			"constants/notification-position.js",
+			"app/background/db/db-helper.js",
+			"app/background/db/schema-red-company-info.js",
+			"app/background/db/schema-red-company-website.js",
+			"app/background/db/schema-red-company-wiki.js",
+			"app/background/db/schema-red-company-facebook.js",
+			"app/background/db/schema-red-company-ig.js",
+			"app/background/db/schema-red-company-twitter.js",
+			"app/background/db/schema-red-company-openrice.js",
+			"app/background/db/schema-red-company-ios-store.js",
+			"app/background/db/schema-red-company-ios-app.js",
+			"app/background/db/schema-red-company-android-store.js",
+			"app/background/db/schema-red-company-android-package.js",
+			"app/background/db/schema-red-company-steam-store.js",
+			"app/background/db/schema-red-company-steam-app.js",
+			"app/background/db/schema-red-company-ps-app.js",
+			"app/background/db/schema-red-company-xbox-app.js",
+			"app/background/db/schema-red-company-switch-app.js",
+			"app/background/service/log-helper.js",
+			"app/background/service/url-service.js",
+			"app/background/service/retrieve-data-service.js",
+			"app/background/service/check-data-service.js",
+			"app/background/service/web-service.js",
+			"app/background/background.js"
+		]
+	},
+
+	"content_scripts": [
+		{
+			"matches": [
+				"<all_urls>"
+			],
+			"js": [
+				"constants/storage-key.js",
+				"constants/browser-message.js",
+				"constants/notification-position.js",
+				"app/content/content.js"
+			],
+      "css": [
+				"app/content/content.css"
+			]
+		}
+	],
+
+  "web_accessible_resources": [
+		"images/icon/close.png",
+		"images/icon/star-outline.png",
+		"images/icon/star-fill.png",
+		"images/other/no-logo.png"
+  ]
+
+}

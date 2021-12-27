@@ -1,0 +1,404 @@
+/* Common */
+.redstop-noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+/* Animation */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+/* Notifications Container */
+.redstop-notifications-container {
+  position: fixed;
+  z-index: 2147483645;
+  animation: fadeIn 0.4s;
+  transition: opacity 0.4s;
+}
+
+.redstop-notifications-container-hide {
+  opacity: 0;
+}
+
+.redstop-notifications-container-tl,
+.redstop-notifications-container-tm,
+.redstop-notifications-container-tr {
+  top: 10px;
+  left: 15px;
+  right: 15px;
+}
+
+.redstop-notifications-container-bl,
+.redstop-notifications-container-bm,
+.redstop-notifications-container-br {
+  bottom: 10px;
+  left: 15px;
+  right: 15px;
+}
+
+@media only screen and (min-width: 576px) {
+  .redstop-notifications-container-tl {
+    top: 15px;
+    right: auto;
+  }
+
+  .redstop-notifications-container-tm {
+    top: 15px;
+    left: 0;
+    right: 0;
+    width: min-content;
+    margin: 0 auto;
+  }
+
+  .redstop-notifications-container-tr {
+    top: 15px;
+    left: auto;
+  }
+
+  .redstop-notifications-container-bl {
+    bottom: 15px;
+    right: auto;
+  }
+
+  .redstop-notifications-container-bm {
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    width: min-content;
+    margin: 0 auto;
+  }
+
+  .redstop-notifications-container-br {
+    bottom: 15px;
+    left: auto;
+  }
+}
+
+
+/* Notification Box */
+.redstop-notification-box-link,
+.redstop-notification-box-link:link,
+.redstop-notification-box-link:hover,
+.redstop-notification-box-link:focus,
+.redstop-notification-box-link:active,
+.redstop-notification-box-link:visited {
+  text-decoration: none;
+}
+
+.redstop-notification-box-link:hover div {
+  opacity: 1 !important;
+}
+
+.redstop-notification-box-link-disabled {
+  cursor: default !important;
+}
+
+.redstop-notification-box {
+  position: relative;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  border-width: 4px;
+  border-style: solid;
+  box-shadow: 0 2px 6px #888;
+  z-index: 2147483646;
+}
+
+.redstop-dark-mode .redstop-notification-box {
+  /* Dark Mode */
+  background-color: #181818;
+}
+
+@media only screen and (min-width: 576px) {
+  .redstop-notification-box {
+    width: min-content;
+  }
+}
+
+.redstop-notifications-container-tl .redstop-notification-box,
+.redstop-notifications-container-tm .redstop-notification-box,
+.redstop-notifications-container-tr .redstop-notification-box {
+  margin: 0 auto 15px;
+}
+
+.redstop-notifications-container-bl .redstop-notification-box,
+.redstop-notifications-container-bm .redstop-notification-box,
+.redstop-notifications-container-br .redstop-notification-box {
+  margin: 15px auto 0;
+}
+
+.redstop-notification-box-star-5 { border-color: #f5c0c0 !important; }
+.redstop-notification-box-star-4 { border-color: #f4c3df !important; }
+.redstop-notification-box-star-3 { border-color: #b8d8f5 !important; }
+.redstop-notification-box-star-2 { border-color: #b2e8f4 !important; }
+.redstop-notification-box-star-1 { border-color: #b2ebdf !important; }
+.redstop-notification-box-star-0 { border-color: #b2e1b5 !important; }
+
+/* Dark Mode */
+.redstop-dark-mode .redstop-notification-box-star-5 { border-color: #ed7b7b !important; }
+.redstop-dark-mode .redstop-notification-box-star-4 { border-color: #f294c9 !important; }
+.redstop-dark-mode .redstop-notification-box-star-3 { border-color: #80bef2 !important; }
+.redstop-dark-mode .redstop-notification-box-star-2 { border-color: #85def2 !important; }
+.redstop-dark-mode .redstop-notification-box-star-1 { border-color: #95edda !important; }
+.redstop-dark-mode .redstop-notification-box-star-0 { border-color: #8dd992 !important; }
+
+.redstop-notification-box-inner {
+  display: flex !important;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.redstop-notification-box-message {
+  width: 100%;
+  text-align: center;
+  color: #333;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+}
+
+.redstop-dark-mode .redstop-notification-box-message {
+  /* Dark Mode */
+  color: #fff;
+}
+
+@media only screen and (min-width: 576px) {
+  .redstop-notification-box-message {
+    width: 300px;
+  }
+}
+
+.redstop-notification-box-remove-space {
+  transition: height 0.4s;
+}
+
+
+/* Close Button */
+.redstop-close-button {
+  display: flex !important;
+  align-items: flex-start;
+  justify-content: flex-end;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 26px;
+  height: 26px;
+  z-index: 2147483647;
+}
+
+@media only screen and (min-width: 576px) {
+  .redstop-close-button {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.redstop-close-button-link {
+  width: 100%;
+  height: 100%;
+}
+
+.redstop-close-button-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 8px;
+  min-width: 8px;
+  max-width: 8px;
+  height: 8px;
+  min-height: 8px;
+  max-height: 8px;
+  margin: 6px 6px 0 0 !important;
+  filter: opacity(40%) !important;
+}
+
+.redstop-dark-mode .redstop-close-button-icon {
+  /* Dark Mode */
+  filter: invert(100%) opacity(80%) !important;
+}
+
+@media only screen and (min-width: 576px) {
+  .redstop-close-button-icon {
+    width: 10px;
+    min-width: 10px;
+    max-width: 10px;
+    height: 10px;
+    min-height: 10px;
+    max-height: 10px;
+  }
+}
+
+
+/* Info - Logo */
+.redstop-logo-container {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  min-width: 35px;
+  max-width: 35px;
+  height: 35px;
+  min-height: 35px;
+  max-height: 35px;
+  margin: 3px 10px 3px 3px !important;
+}
+
+.redstop-dark-mode .redstop-logo-container {
+  /* Dark Mode */
+  padding: 5px;
+  background-color: #fff;
+  border: 2px solid #888
+}
+
+@media only screen and (min-width: 576px) {
+  .redstop-logo-container {
+    width: 45px;
+    min-width: 45px;
+    max-width: 45px;
+    height: 45px;
+    min-height: 45px;
+    max-height: 45px;
+    margin: 5px 12px 5px 5px;
+  }
+
+  .redstop-dark-mode .redstop-logo-container {
+    /* Dark Mode */
+    padding: 6px;
+  }
+}
+
+.redstop-logo {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0;
+  filter: none !important;
+}
+
+
+/* Info - Name */
+.redstop-name-container {
+  width: 100%;
+}
+
+@media only screen and (min-width: 576px) {
+  .redstop-name-container {
+    width: 120px;
+  }
+}
+
+.redstop-name {
+  display: block !important;
+  font-family: Roboto, Helvetica Neue, sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  color: #333;
+  line-height: 1.4;
+  letter-spacing: 0px;
+  white-space: normal;
+  text-align: left;
+}
+
+.redstop-dark-mode .redstop-name {
+  /* Dark Mode */
+  color: #fff;
+}
+
+@media only screen and (min-width: 576px) {
+  .redstop-name {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+.redstop-sub-name {
+  display: block !important;
+  padding-top: 3px;
+  font-family: Roboto, Helvetica Neue, sans-serif;
+  font-size: 9px;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  color: #999;
+  line-height: 1.4;
+  letter-spacing: 0px;
+  white-space: normal;
+  text-align: left;
+}
+
+.redstop-dark-mode .redstop-sub-name {
+  /* Dark Mode */
+  color: #aaa;
+}
+
+@media only screen and (min-width: 576px) {
+  .redstop-sub-name {
+    font-size: 8px;
+    line-height: 1.3;
+  }
+}
+
+
+/* Info - Star */
+.redstop-star-container {
+  display: flex !important;
+  flex-direction: row;
+  padding: 0 6px 0 12px;
+}
+
+@media only screen and (min-width: 576px) {
+  .redstop-star-container {
+    padding: 0 8px 0 16px;
+  }
+}
+
+.redstop-star {
+  width: 18px;
+  min-width: 18px;
+  max-width: 18px;
+  height: 18px;
+  min-height: 18px;
+  max-height: 18px;
+  margin: 0 0 0 2px !important;
+}
+
+@media only screen and (min-width: 576px) {
+  .redstop-star {
+    width: 20px;
+    min-width: 20px;
+    max-width: 20px;
+    height: 20px;
+    min-height: 20px;
+    max-height: 20px;
+    margin-left: 3px !important;
+  }
+}
+
+.redstop-star-5 { filter: invert(55%) sepia(95%) saturate(6530%) hue-rotate(344deg) brightness(89%) contrast(96%) !important; } /* df2e2e */
+.redstop-star-4 { filter: invert(33%) sepia(84%) saturate(3289%) hue-rotate(306deg) brightness(93%) contrast(84%) !important; } /* db3995 */
+.redstop-star-3 { filter: invert(34%) sepia(66%) saturate(5413%) hue-rotate(195deg) brightness(103%) contrast(84%) !important; } /* 147dde */
+.redstop-star-2 { filter: invert(76%) sepia(58%) saturate(6391%) hue-rotate(153deg) brightness(96%) contrast(101%) !important; } /* 00b3dc */
+.redstop-star-1 { filter: invert(61%) sepia(24%) saturate(5963%) hue-rotate(128deg) brightness(92%) contrast(101%) !important; } /* 00bc94 */
+.redstop-star-0 { filter: invert(32%) sepia(33%) saturate(3851%) hue-rotate(108deg) brightness(104%) contrast(103%) !important; } /* 009c0a */
+
+/* Dark Mode */
+.redstop-dark-mode .redstop-star-5 { filter: invert(42%) sepia(16%) saturate(1677%) hue-rotate(312deg) brightness(107%) contrast(120%) !important; } /* e05353 */
+.redstop-dark-mode .redstop-star-4 { filter: invert(61%) sepia(32%) saturate(3797%) hue-rotate(293deg) brightness(91%) contrast(88%) !important; } /* db5ea5 */
+.redstop-dark-mode .redstop-star-3 { filter: invert(51%) sepia(83%) saturate(494%) hue-rotate(173deg) brightness(101%) contrast(93%) !important; } /* 45a5f6 */
+.redstop-dark-mode .redstop-star-2 { filter: invert(75%) sepia(51%) saturate(683%) hue-rotate(156deg) brightness(89%) contrast(96%) !important; } /* 4cc5e0 */
+.redstop-dark-mode .redstop-star-1 { filter: invert(93%) sepia(88%) saturate(487%) hue-rotate(86deg) brightness(86%) contrast(97%) !important; } /* 5fd8be */
+.redstop-dark-mode .redstop-star-0 { filter: invert(66%) sepia(40%) saturate(548%) hue-rotate(74deg) brightness(96%) contrast(88%) !important; } /* 63c66a */

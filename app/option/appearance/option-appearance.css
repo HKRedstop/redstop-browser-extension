@@ -1,0 +1,122 @@
+/* Appearance - Notification Position Radio */
+.redstop-option-appearance-position-container {
+  margin-bottom: 40px;
+}
+
+.redstop-option-appearance-position-desktop-container {
+  display: none;
+}
+
+@media only screen and (min-width: 576px) {
+  .redstop-option-appearance-position-desktop-container {
+    display: block;
+  }
+}
+
+.redstop-option-appearance-position-mobile-container {
+  display: block
+}
+
+@media only screen and (min-width: 576px) {
+  .redstop-option-appearance-position-mobile-container {
+    display: none;
+  }
+}
+
+.redstop-option-appearance-position-row {
+  margin-top: 10px;
+}
+
+.redstop-option-appearance-position-radio {
+  appearance: none;
+  border-radius: 5px;
+  border: 2px solid #999;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: opacity(0.13);
+  cursor: pointer;
+}
+
+.redstop-dark-mode .redstop-option-appearance-position-radio {
+  /* Dark Mode */
+  border-color: #777;
+  filter: invert(1) opacity(0.3);
+}
+
+.redstop-option-appearance-position-radio:checked {
+  border-color: #2be5e5;
+  background-color: #2be5e5;
+  filter: invert(100%);
+}
+
+.redstop-dark-mode .redstop-option-appearance-position-radio:checked {
+  /* Dark Mode */
+  border-color: #42b5b5;
+  background-color: #42b5b5;
+}
+
+.redstop-option-appearance-position-desktop-radio {
+  width: 128px;
+  height: 72px;
+  margin-right: 12px;
+}
+
+.redstop-option-appearance-position-desktop-radio:last-child {
+  margin-right: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .redstop-option-appearance-position-desktop-radio {
+    width: 160px;
+    height: 90px;
+    margin-right: 15px;
+  }
+
+  .redstop-option-appearance-position-desktop-radio:last-child {
+    margin-right: 0;
+  }
+}
+
+.redstop-option-appearance-position-mobile-radio {
+  width: 108px;
+  height: 192px;
+  margin-right: 15px;
+}
+
+.redstop-option-appearance-position-mobile-radio:last-child {
+  margin-right: 0;
+}
+
+.redstop-option-appearance-position-desktop-radio-tl { background-image: url('/images/other/notification-position-desktop-tl.png'); }
+.redstop-option-appearance-position-desktop-radio-tm { background-image: url('/images/other/notification-position-desktop-tm.png'); }
+.redstop-option-appearance-position-desktop-radio-tr { background-image: url('/images/other/notification-position-desktop-tr.png'); }
+.redstop-option-appearance-position-desktop-radio-bl { background-image: url('/images/other/notification-position-desktop-bl.png'); }
+.redstop-option-appearance-position-desktop-radio-bm { background-image: url('/images/other/notification-position-desktop-bm.png'); }
+.redstop-option-appearance-position-desktop-radio-br { background-image: url('/images/other/notification-position-desktop-br.png'); }
+
+.redstop-option-appearance-position-mobile-radio-t { background-image: url('/images/other/notification-position-mobile-t.png'); }
+.redstop-option-appearance-position-mobile-radio-b { background-image: url('/images/other/notification-position-mobile-b.png'); }
+
+
+/* Appearance - Auto Hide */
+.redstop-option-appearance-auto-hide-time-container {
+  display: none;
+  margin-left: 40px; /* checkbox width + label margin left */
+  color: #333;
+}
+
+.redstop-dark-mode .redstop-option-appearance-auto-hide-time-container {
+  /* Dark Mode */
+  color: #fff;
+}
+
+.redstop-option-appearance-auto-hide-time-container-show {
+  display: flex;
+  align-items: center;
+}
+
+.redstop-option-appearance-auto-hide-time {
+  width: 45px;
+  text-align: center;
+}

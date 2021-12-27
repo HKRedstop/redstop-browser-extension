@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>共業Redstop</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/library/bootstrap.min.css">
+	<link rel="stylesheet" href="popup.css">
+	<script src="/library/bootstrap.min.js"></script>
+	<script src="/constants/connection-port.js"></script>
+	<script src="/constants/browser-message.js"></script>
+	<script src="/constants/storage-key.js"></script>
+	<script src="/constants/option-tab.js"></script>
+	<script src="popup.js"></script>
+</head>
+
+
+<body>
+	<div id="redstop-popup-container" class="redstop-popup-container redstop-noselect">
+
+		<!-- logo -->
+		<div class="redstop-popup-logo-container">
+			<img id="redstop-popup-logo" class="redstop-popup-logo" src="/images/logo/logo-128.png">
+		</div>
+
+		<!-- enable switch -->
+		<div class="form-check form-switch redstop-popup-enable-switch-container">
+			<label for="redstop-popup-enable-switch" class="redstop-popup-enable-switch-label">檢查網頁</label>
+		  <input id="redstop-popup-enable-switch" type="checkbox" class="form-check-input redstop-popup-enable-switch">
+		</div>
+		<hr class="redstop-popup-button-hr">
+
+		<!-- function setting button -->
+		<div id="redstop-popup-function-setting-button" class="redstop-popup-button">
+			<img class="redstop-popup-button-icon" src="/images/icon/setting.png">
+			<div class="redstop-popup-button-text">選擇功能</div>
+		</div>
+		<hr class="redstop-popup-button-hr">
+
+		<!-- appearance setting button -->
+		<div id="redstop-popup-appearance-setting-button" class="redstop-popup-button">
+			<img class="redstop-popup-button-icon" src="/images/icon/appearance.png">
+			<div class="redstop-popup-button-text">設定外觀</div>
+		</div>
+		<hr class="redstop-popup-button-hr">
+
+		<!-- manage except site button -->
+		<div id="redstop-popup-manage-except-site-button" class="redstop-popup-button">
+			<img class="redstop-popup-button-icon" src="/images/icon/list.png">
+			<div class="redstop-popup-button-text">管理略過名單</div>
+		</div>
+		<hr class="redstop-popup-button-hr">
+
+		<!-- add except site button -->
+		<div id="redstop-popup-add-except-site-button" class="redstop-popup-button-hide">
+			<img class="redstop-popup-button-icon" src="/images/icon/add.png">
+			<div class="redstop-popup-button-text">加至略過名單</div>
+		</div>
+		<hr id="redstop-popup-add-except-site-hr" class="redstop-popup-button-hr-hide">
+
+		<!-- report button -->
+		<div id="redstop-popup-report-button" class="redstop-popup-button-hide">
+			<img class="redstop-popup-button-icon" src="/images/icon/report.png">
+			<div class="redstop-popup-button-text">報告錯誤</div>
+		</div>
+		<hr id="redstop-popup-report-hr" class="redstop-popup-button-hr-hide">
+
+		<!-- open website button -->
+		<div id="redstop-popup-open-website-button" class="redstop-popup-button-hide">
+			<img class="redstop-popup-button-icon" src="/images/icon/open.png">
+			<div class="redstop-popup-button-text">開啟網頁</div>
+		</div>
+		<hr  id="redstop-popup-open-website-hr" class="redstop-popup-button-hr-hide">
+
+		<!-- version -->
+		<div id="redstop-popup-version" class="redstop-popup-version"></div>
+
+	</div>
+
+
+	<!-- add except site -->
+	<div id="redstop-popup-add-except-site-container" class="redstop-popup-add-except-site-container redstop-popup-add-except-site-container-hide">
+		<iframe id="redstop-popup-add-except-site-iframe" class="redstop-popup-content-iframe" src="add-except-site/popup-add-except-site.html"></iframe>
+	</div>
+</body>
+
+
+</html>

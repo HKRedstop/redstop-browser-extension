@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>共業Redstop - 加至略過名單</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/library/bootstrap.min.css">
+	<link rel="stylesheet" href="../popup.css">
+	<link rel="stylesheet" href="popup-add-except-site.css">
+	<script src="/library/bootstrap.min.js"></script>
+	<script src="/constants/storage-key.js"></script>
+	<script src="/constants/browser-message.js"></script>
+	<script src="popup-add-except-site.js"></script>
+</head>
+
+
+<body class="redstop-popup-content-iframe-body">
+	<div class="redstop-popup-content-iframe-content">
+
+		<!-- Title -->
+		<div class="redstop-popup-add-except-site-title">加至略過名單</div>
+
+		<!-- Website -->
+		<div id="redstop-popup-add-except-site-website-checkbox-container" class="form-check redstop-popup-content-checkbox-container-hidden">
+	    <input id="redstop-popup-add-except-site-website-checkbox" class="form-check-input redstop-popup-content-checkbox" type="checkbox" value="Y">
+	    <label for="redstop-popup-add-except-site-website-checkbox" class="form-check-label redstop-popup-content-checkbox-label">
+				<span>網頁</span><br>
+				<div id="redstop-popup-add-except-site-website-checkbox-label-value" class="redstop-popup-add-except-site-checkbox-label-value"></div>
+			</label>
+	  </div>
+
+		<!-- Wiki -->
+		<div id="redstop-popup-add-except-site-wiki-checkbox-container" class="form-check redstop-popup-content-checkbox-container-hidden">
+	    <input id="redstop-popup-add-except-site-wiki-checkbox" class="form-check-input redstop-popup-content-checkbox" type="checkbox" value="Y">
+	    <label for="redstop-popup-add-except-site-wiki-checkbox" class="form-check-label redstop-popup-content-checkbox-label">
+				<span>Wikipedia</span><br>
+				<div id="redstop-popup-add-except-site-wiki-checkbox-label-value" class="redstop-popup-add-except-site-checkbox-label-value"></div>
+			</label>
+	  </div>
+
+		<!-- Facebook -->
+		<div id="redstop-popup-add-except-site-facebook-checkbox-container" class="form-check redstop-popup-content-checkbox-container-hidden">
+	    <input id="redstop-popup-add-except-site-facebook-checkbox" class="form-check-input redstop-popup-content-checkbox" type="checkbox" value="Y">
+	    <label for="redstop-popup-add-except-site-facebook-checkbox" class="form-check-label redstop-popup-content-checkbox-label">
+				<span>Facebook</span><br>
+				<div id="redstop-popup-add-except-site-facebook-checkbox-label-value" class="redstop-popup-add-except-site-checkbox-label-value"></div>
+			</label>
+	  </div>
+
+		<!-- IG -->
+		<div id="redstop-popup-add-except-site-ig-checkbox-container" class="form-check redstop-popup-content-checkbox-container-hidden">
+	    <input id="redstop-popup-add-except-site-ig-checkbox" class="form-check-input redstop-popup-content-checkbox" type="checkbox" value="Y">
+	    <label for="redstop-popup-add-except-site-ig-checkbox" class="form-check-label redstop-popup-content-checkbox-label">
+				<span>Instagram</span><br>
+				<div id="redstop-popup-add-except-site-ig-checkbox-label-value" class="redstop-popup-add-except-site-checkbox-label-value"></div>
+			</label>
+	  </div>
+
+		<!-- Twitter -->
+		<div id="redstop-popup-add-except-site-twitter-checkbox-container" class="form-check redstop-popup-content-checkbox-container-hidden">
+	    <input id="redstop-popup-add-except-site-twitter-checkbox" class="form-check-input redstop-popup-content-checkbox" type="checkbox" value="Y">
+	    <label for="redstop-popup-add-except-site-twitter-checkbox" class="form-check-label redstop-popup-content-checkbox-label">
+				<span>Twitter</span><br>
+				<div id="redstop-popup-add-except-site-twitter-checkbox-label-value" class="redstop-popup-add-except-site-checkbox-label-value"></div>
+			</label>
+	  </div>
+
+		<!-- Openrice -->
+		<div id="redstop-popup-add-except-site-openrice-checkbox-container" class="form-check redstop-popup-content-checkbox-container-hidden">
+	    <input id="redstop-popup-add-except-site-openrice-checkbox" class="form-check-input redstop-popup-content-checkbox" type="checkbox" value="Y">
+	    <label for="redstop-popup-add-except-site-openrice-checkbox" class="form-check-label redstop-popup-content-checkbox-label">
+				<span>Openrice</span><br>
+				<div id="redstop-popup-add-except-site-openrice-checkbox-label-value" class="redstop-popup-add-except-site-checkbox-label-value"></div>
+			</label>
+	  </div>
+
+		<!-- iOS Store -->
+		<div id="redstop-popup-add-except-site-ios-store-checkbox-container" class="form-check redstop-popup-content-checkbox-container-hidden">
+	    <input id="redstop-popup-add-except-site-ios-store-checkbox" class="form-check-input redstop-popup-content-checkbox" type="checkbox" value="Y">
+	    <label for="redstop-popup-add-except-site-ios-store-checkbox" class="form-check-label redstop-popup-content-checkbox-label">
+				<span>iOS商店</span><br>
+				<div id="redstop-popup-add-except-site-ios-store-checkbox-label-value" class="redstop-popup-add-except-site-checkbox-label-value"></div>
+			</label>
+	  </div>
+
+		<!-- iOS App -->
+		<div id="redstop-popup-add-except-site-ios-app-checkbox-container" class="form-check redstop-popup-content-checkbox-container-hidden">
+	    <input id="redstop-popup-add-except-site-ios-app-checkbox" class="form-check-input redstop-popup-content-checkbox" type="checkbox" value="Y">
+	    <label for="redstop-popup-add-except-site-ios-app-checkbox" class="form-check-label redstop-popup-content-checkbox-label">
+				<span>iOS App</span><br>
+				<div id="redstop-popup-add-except-site-ios-app-checkbox-label-value" class="redstop-popup-add-except-site-checkbox-label-value"></div>
+			</label>
+	  </div>
+
+		<!-- Android Store -->
+		<div id="redstop-popup-add-except-site-android-store-checkbox-container" class="form-check redstop-popup-content-checkbox-container-hidden">
+	    <input id="redstop-popup-add-except-site-android-store-checkbox" class="form-check-input redstop-popup-content-checkbox" type="checkbox" value="Y">
+	    <label for="redstop-popup-add-except-site-android-store-checkbox" class="form-check-label redstop-popup-content-checkbox-label">
+				<span>Android商店</span><br>
+				<div id="redstop-popup-add-except-site-android-store-checkbox-label-value" class="redstop-popup-add-except-site-checkbox-label-value"></div>
+			</label>
+	  </div>
+
+		<!-- Android Package -->
+		<div id="redstop-popup-add-except-site-android-package-checkbox-container" class="form-check redstop-popup-content-checkbox-container-hidden">
+	    <input id="redstop-popup-add-except-site-android-package-checkbox" class="form-check-input redstop-popup-content-checkbox" type="checkbox" value="Y">
+	    <label for="redstop-popup-add-except-site-android-package-checkbox" class="form-check-label redstop-popup-content-checkbox-label">
+				<span>Android App</span><br>
+				<div id="redstop-popup-add-except-site-android-package-checkbox-label-value" class="redstop-popup-add-except-site-checkbox-label-value"></div>
+			</label>
+	  </div>
+
+		<!-- Steam Store -->
+		<div id="redstop-popup-add-except-site-steam-store-checkbox-container" class="form-check redstop-popup-content-checkbox-container-hidden">
+	    <input id="redstop-popup-add-except-site-steam-store-checkbox" class="form-check-input redstop-popup-content-checkbox" type="checkbox" value="Y">
+	    <label for="redstop-popup-add-except-site-steam-store-checkbox" class="form-check-label redstop-popup-content-checkbox-label">
+				<span>Steam商店</span><br>
+				<div id="redstop-popup-add-except-site-steam-store-checkbox-label-value" class="redstop-popup-add-except-site-checkbox-label-value"></div>
+			</label>
+	  </div>
+
+		<!-- Steam App -->
+		<div id="redstop-popup-add-except-site-steam-app-checkbox-container" class="form-check redstop-popup-content-checkbox-container-hidden">
+	    <input id="redstop-popup-add-except-site-steam-app-checkbox" class="form-check-input redstop-popup-content-checkbox" type="checkbox" value="Y">
+	    <label for="redstop-popup-add-except-site-steam-app-checkbox" class="form-check-label redstop-popup-content-checkbox-label">
+				<span>Steam遊戲</span><br>
+				<div id="redstop-popup-add-except-site-steam-app-checkbox-label-value" class="redstop-popup-add-except-site-checkbox-label-value"></div>
+			</label>
+	  </div>
+
+		<!-- PS App -->
+		<div id="redstop-popup-add-except-site-ps-app-checkbox-container" class="form-check redstop-popup-content-checkbox-container-hidden">
+	    <input id="redstop-popup-add-except-site-ps-app-checkbox" class="form-check-input redstop-popup-content-checkbox" type="checkbox" value="Y">
+	    <label for="redstop-popup-add-except-site-ps-app-checkbox" class="form-check-label redstop-popup-content-checkbox-label">
+				<span>PlayStation遊戲</span><br>
+				<div id="redstop-popup-add-except-site-ps-app-checkbox-label-value" class="redstop-popup-add-except-site-checkbox-label-value"></div>
+			</label>
+	  </div>
+
+		<!-- Xbox App -->
+		<div id="redstop-popup-add-except-site-xbox-app-checkbox-container" class="form-check redstop-popup-content-checkbox-container-hidden">
+	    <input id="redstop-popup-add-except-site-xbox-app-checkbox" class="form-check-input redstop-popup-content-checkbox" type="checkbox" value="Y">
+	    <label for="redstop-popup-add-except-site-xbox-app-checkbox" class="form-check-label redstop-popup-content-checkbox-label">
+				<span>Xbox遊戲</span><br>
+				<div id="redstop-popup-add-except-site-xbox-app-checkbox-label-value" class="redstop-popup-add-except-site-checkbox-label-value"></div>
+			</label>
+	  </div>
+
+		<!-- Switch App -->
+		<div id="redstop-popup-add-except-site-switch-app-checkbox-container" class="form-check redstop-popup-content-checkbox-container-hidden">
+	    <input id="redstop-popup-add-except-site-switch-app-checkbox" class="form-check-input redstop-popup-content-checkbox" type="checkbox" value="Y">
+	    <label for="redstop-popup-add-except-site-switch-app-checkbox" class="form-check-label redstop-popup-content-checkbox-label">
+				<span>Switch遊戲</span><br>
+				<div id="redstop-popup-add-except-site-switch-app-checkbox-label-value" class="redstop-popup-add-except-site-checkbox-label-value"></div>
+			</label>
+	  </div>
+
+		<!-- Button -->
+		<div class="redstop-popup-add-except-site-button-container">
+			<button id="redstop-popup-add-except-site-save-button" class="btn redstop-popup-content-button redstop-popup-content-button-primary" type="button">加入</button>
+			<button id="redstop-popup-add-except-site-cancel-button" class="btn redstop-popup-content-button redstop-popup-content-button-secondary" type="button">取消</button>
+		</div>
+
+	</div>
+</body>
+
+</html>

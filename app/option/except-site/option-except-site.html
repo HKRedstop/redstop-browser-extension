@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>共業Redstop - 略過名單</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/library/bootstrap.min.css">
+	<link rel="stylesheet" href="/library/codemirror.css">
+	<link rel="stylesheet" href="../option.css">
+	<link rel="stylesheet" href="option-except-site.css">
+	<script src="/library/bootstrap.min.js"></script>
+	<script src="/library/codemirror.js"></script>
+	<script src="/library/codemirror-addon-active-line.js"></script>
+	<script src="/constants/storage-key.js"></script>
+	<script src="option-except-site.js"></script>
+</head>
+
+
+<body class="redstop-option-content-body redstop-option-except-site-body">
+
+	<!-- Menu -->
+  <nav id="redstop-option-except-site-menu" class="redstop-option-except-site-menu redstop-noselect">
+
+		<!-- Menu: Website -->
+		<div id="redstop-option-except-site-menu-website" class="redstop-option-except-site-menu-item">
+			<img class="redstop-option-except-site-menu-item-icon redstop-option-except-site-menu-item-icon-website" src="/images/media/website.png">
+			<span class="redstop-option-except-site-menu-item-text">網頁</span>
+		</div>
+
+		<!-- Menu: Wiki -->
+		<div id="redstop-option-except-site-menu-wiki" class="redstop-option-except-site-menu-item">
+			<img class="redstop-option-except-site-menu-item-icon redstop-option-except-site-menu-item-icon-wiki" src="/images/media/wiki.png">
+			<span class="redstop-option-except-site-menu-item-text">Wikipedia</span>
+		</div>
+
+		<!-- Menu: Facebook -->
+		<div id="redstop-option-except-site-menu-facebook" class="redstop-option-except-site-menu-item">
+			<img class="redstop-option-except-site-menu-item-icon redstop-option-except-site-menu-item-icon-facebook" src="/images/media/facebook.png">
+			<span class="redstop-option-except-site-menu-item-text">Facebook</span>
+		</div>
+
+		<!-- Menu: IG -->
+		<div id="redstop-option-except-site-menu-ig" class="redstop-option-except-site-menu-item">
+			<img class="redstop-option-except-site-menu-item-icon redstop-option-except-site-menu-item-icon-ig" src="/images/media/ig.png">
+			<span class="redstop-option-except-site-menu-item-text">Instagram</span>
+		</div>
+
+		<!-- Menu: Twitter -->
+		<div id="redstop-option-except-site-menu-twitter" class="redstop-option-except-site-menu-item">
+			<img class="redstop-option-except-site-menu-item-icon redstop-option-except-site-menu-item-icon-twitter" src="/images/media/twitter.png">
+			<span class="redstop-option-except-site-menu-item-text">Twitter</span>
+		</div>
+
+		<!-- Menu: Openrice -->
+		<div id="redstop-option-except-site-menu-openrice" class="redstop-option-except-site-menu-item">
+			<img class="redstop-option-except-site-menu-item-icon redstop-option-except-site-menu-item-icon-openrice" src="/images/media/openrice.png">
+			<span class="redstop-option-except-site-menu-item-text">Openrice</span>
+		</div>
+
+		<!-- Menu: iOS Store -->
+		<div id="redstop-option-except-site-menu-ios-store" class="redstop-option-except-site-menu-item">
+			<img class="redstop-option-except-site-menu-item-icon redstop-option-except-site-menu-item-icon-ios" src="/images/media/ios-store.png">
+			<span class="redstop-option-except-site-menu-item-text">iOS商店</span>
+		</div>
+
+		<!-- Menu: iOS App -->
+		<div id="redstop-option-except-site-menu-ios-app" class="redstop-option-except-site-menu-item">
+			<img class="redstop-option-except-site-menu-item-icon redstop-option-except-site-menu-item-icon-ios" src="/images/media/ios.png">
+			<span class="redstop-option-except-site-menu-item-text">iOS App</span>
+		</div>
+
+		<!-- Menu: Android Store -->
+		<div id="redstop-option-except-site-menu-android-store" class="redstop-option-except-site-menu-item">
+			<img class="redstop-option-except-site-menu-item-icon redstop-option-except-site-menu-item-icon-android" src="/images/media/android-store.png">
+			<span class="redstop-option-except-site-menu-item-text">Android商店</span>
+		</div>
+
+		<!-- Menu: Android App -->
+		<div id="redstop-option-except-site-menu-android-package" class="redstop-option-except-site-menu-item">
+			<img class="redstop-option-except-site-menu-item-icon redstop-option-except-site-menu-item-icon-android" src="/images/media/android.png">
+			<span class="redstop-option-except-site-menu-item-text">Android App</span>
+		</div>
+
+		<!-- Menu: Steam Store -->
+		<div id="redstop-option-except-site-menu-steam-store" class="redstop-option-except-site-menu-item">
+			<img class="redstop-option-except-site-menu-item-icon redstop-option-except-site-menu-item-icon-steam" src="/images/media/steam-store.png">
+			<span class="redstop-option-except-site-menu-item-text">Steam商店</span>
+		</div>
+
+		<!-- Menu: Steam App -->
+		<div id="redstop-option-except-site-menu-steam-app" class="redstop-option-except-site-menu-item">
+			<img class="redstop-option-except-site-menu-item-icon redstop-option-except-site-menu-item-icon-steam" src="/images/media/steam.png">
+			<span class="redstop-option-except-site-menu-item-text">Steam遊戲</span>
+		</div>
+
+		<!-- Menu: PS App -->
+		<div id="redstop-option-except-site-menu-ps-app" class="redstop-option-except-site-menu-item">
+			<img class="redstop-option-except-site-menu-item-icon redstop-option-except-site-menu-item-icon-ps" src="/images/media/ps.png">
+			<span class="redstop-option-except-site-menu-item-text">PlayStation遊戲</span>
+		</div>
+
+		<!-- Menu: Xbox App -->
+		<div id="redstop-option-except-site-menu-xbox-app" class="redstop-option-except-site-menu-item">
+			<img class="redstop-option-except-site-menu-item-icon redstop-option-except-site-menu-item-icon-xbox" src="/images/media/xbox.png">
+			<span class="redstop-option-except-site-menu-item-text">Xbox遊戲</span>
+		</div>
+
+		<!-- Menu: Switch App -->
+		<div id="redstop-option-except-site-menu-switch-app" class="redstop-option-except-site-menu-item">
+			<img class="redstop-option-except-site-menu-item-icon redstop-option-except-site-menu-item-icon-switch" src="/images/media/switch.png">
+			<span class="redstop-option-except-site-menu-item-text">Switch遊戲</span>
+		</div>
+
+  </nav>
+
+
+	<!-- Content -->
+	<div class="redstop-option-except-site-content">
+
+		<!-- Title and Buttons -->
+		<div class="redstop-option-except-site-content-title-container">
+			<span id="redstop-option-except-site-content-title-text" class="redstop-option-except-site-content-title-text">Google Play</span>
+			<div>
+				<button id="redstop-option-except-site-content-save-button" class="btn redstop-option-content-button redstop-option-content-button-primary" type="button">儲存</button>
+				<button id="redstop-option-except-site-content-reset-button" class="btn redstop-option-content-button redstop-option-content-button-secondary" type="button">還原</button>
+			</div>
+		</div>
+
+		<!-- Editor -->
+		<div class="redstop-option-except-site-content-editor-remark">每行代表一個單位 (* 代表wildcard)</div>
+		<div id="redstop-option-except-site-content-editor" class="redstop-option-except-site-content-editor"></div>
+
+	</div>
+
+</body>
+
+</html>

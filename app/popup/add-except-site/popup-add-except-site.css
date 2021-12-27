@@ -1,0 +1,25 @@
+.redstop-popup-add-except-site-title {
+  padding-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.redstop-dark-mode .redstop-popup-add-except-site-title {
+  /* Dark Mode */
+  color: #fff;
+}
+
+.redstop-popup-add-except-site-checkbox-label-value {
+  margin-bottom: 10px;
+  color: #bbb;
+}
+
+.redstop-dark-mode .redstop-popup-add-except-site-checkbox-label-value {
+  /* Dark Mode */
+  color: #999;
+}
+
+.redstop-popup-add-except-site-button-container {
+  margin-top: 10px;
+}

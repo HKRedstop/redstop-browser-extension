@@ -1,0 +1,292 @@
+/* Common */
+.redstop-noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+/* Common - Label */
+.redstop-option-content-label {
+  color: #333;
+}
+
+.redstop-dark-mode .redstop-option-content-label {
+  /* Dark Mode */
+  color: #fff;
+}
+
+
+/* Common - Remark */
+.redstop-option-content-remark {
+  font-size: 12px;
+  color: #aaa;
+}
+
+
+/* Common - Input Text */
+.redstop-option-content-input-text {
+  max-height: 24px;
+  margin: 0 6px;
+  background-color: #fff;
+  color: #333;
+  border: none;
+  border-bottom: 1px solid #bbb;
+}
+
+.redstop-dark-mode .redstop-option-content-input-text {
+  /* Dark Mode */
+  background-color: #181818;
+  color: #fff;
+  border-color: #666;
+}
+
+.redstop-option-content-inpu-text:focus {
+  outline: none;
+  border-color: #d41a1a;
+}
+
+.redstop-dark-mode .redstop-option-content-input-text:focus {
+  /* Dark Mode */
+  border-color: #bd4a4a;
+}
+
+
+/* Common - Checkbox */
+.redstop-option-content-checkbox-container.form-check {
+  display: flex;
+  min-height: inherit;
+  margin: 0 0 12px;
+  padding: 0;
+}
+
+.redstop-option-content-checkbox.form-check-input,
+.redstop-option-content-checkbox.form-check-input:focus {
+  width: 20px;
+  min-width: 20px;
+  max-width: 20px;
+  height: 20px;
+  min-height: 20px;
+  max-height: 20px;
+  margin: 1px 0 0;
+  padding: 0;
+  background-color: #fff;
+  border-color: rgba(0, 0, 0, 0.25);
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.redstop-dark-mode .redstop-option-content-checkbox.form-check-input,
+.redstop-dark-mode .redstop-option-content-checkbox.form-check-input:focus {
+  /* Dark Mode */
+  background-color: #181818;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.redstop-option-content-checkbox.form-check-input:checked {
+  background-color: #d41a1a;
+  border-color: #d41a1a;
+}
+
+.redstop-dark-mode .redstop-option-content-checkbox.form-check-input:checked {
+  /* Dark Mode */
+  background-color: #bd4a4a;
+  border-color: #bd4a4a;
+}
+
+.redstop-option-content-checkbox-label.form-check-label {
+  margin: 0;
+  padding: 0 0 0 20px;
+  color: #333;
+  line-height: 20px;
+}
+
+.redstop-dark-mode .redstop-option-content-checkbox-label.form-check-label {
+  /* Dark Mode */
+  color: #fff;
+}
+
+
+/* Common - Button */
+.redstop-option-content-button.btn {
+  margin: 2px;
+  font-size: 14px;
+}
+
+@media only screen and (min-width: 576px) {
+  .redstop-option-content-button.btn {
+    font-size: 16px;
+  }
+}
+
+.redstop-option-content-button.btn:focus {
+  box-shadow: none;
+}
+
+.redstop-option-content-button.btn.disabled,
+.redstop-option-content-button.btn:disabled {
+  opacity: inherit;
+  filter: opacity(0.3) grayscale(0.6);
+}
+
+.redstop-option-content-button-primary.btn {
+  background-color: #d41a1a;
+  color: #fff;
+}
+
+.redstop-dark-mode .redstop-option-content-button-primary.btn {
+  /* Dark Mode */
+  background-color: #bd4a4a;
+}
+
+.redstop-option-content-button-primary.btn:hover {
+  background-color: #a30d0d;
+  color: #fff;
+}
+
+.redstop-dark-mode .redstop-option-content-button-primary.btn:hover {
+  /* Dark Mode */
+  background-color: #9e3434;
+}
+
+.redstop-option-content-button-secondary.btn {
+  background-color: #777;
+  color: #fff;
+}
+
+.redstop-option-content-button-secondary.btn:hover {
+  background-color: #444;
+  color: #fff;
+}
+
+
+/* Common - Button (Loading) */
+.redstop-option-content-button.btn .redstop-option-content-button-loading-text {
+  display: none;
+}
+
+.redstop-option-content-button.btn.redstop-option-content-button-loading .redstop-option-content-button-loading-text {
+  display: block;
+}
+
+.redstop-option-content-button.btn .redstop-option-content-button-text {
+  display: block;
+}
+
+.redstop-option-content-button.btn.redstop-option-content-button-loading .redstop-option-content-button-text {
+  display: none;
+}
+
+
+/* Common - hr */
+.redstop-option-content-hr {
+  width: 100%;
+  margin: 20px 0;
+  border-top: 1px #999 solid;
+}
+
+
+/* Body */
+.redstop-option-body {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+.redstop-option-body.redstop-dark-mode {
+  /* Dark Mode */
+  background-color: #181818;
+}
+
+
+/* Tab */
+.redstop-option-tab.nav-tabs {
+  border-color: #ddd;
+}
+
+.redstop-dark-mode .redstop-option-tab.nav-tabs {
+  /* Dark Mode */
+  border-color: #555;
+}
+
+.redstop-option-tab-button.nav-link {
+  background-color: #fff;
+  color: #333;
+  border-color: transparent transparent #ddd;
+  transition: none;
+}
+
+.redstop-dark-mode .redstop-option-tab-button.nav-link {
+  /* Dark Mode */
+  background-color: #181818;
+  color: #fff;
+  border-color: transparent transparent #555;
+}
+
+.redstop-option-tab-button.nav-link:hover,
+.redstop-option-tab-button.nav-link:focus {
+  color: #d41a1a;
+  outline: none;
+}
+
+.redstop-dark-mode .redstop-option-tab-button.nav-link:hover,
+.redstop-dark-mode .redstop-option-tab-button.nav-link:focus {
+  /* Dark Mode */
+  color: #bd4a4a;
+}
+
+.redstop-option-tab-button.nav-link.active {
+  color: #d41a1a;
+  font-weight: bold;
+  border-color: #ddd #ddd #fff;
+}
+
+.redstop-dark-mode .redstop-option-tab-button.nav-link.active {
+  /* Dark Mode */
+  color: #bd4a4a;
+  border-color: #555 #555 #181818;
+}
+
+
+/* Content */
+.redstop-option-content {
+  width: 100%;
+  height: 100%;
+}
+
+.redstop-option-content-inner {
+  width: 100%;
+  height: 100%;
+}
+
+.redstop-option-content-iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.redstop-option-content-has-padding {
+  padding: 30px 40px;
+}
+
+.redstop-option-content,
+.redstop-option-content-inner,
+.redstop-option-content-iframe,
+.redstop-option-content-body,
+.redstop-option-content-has-padding {
+  background-color: #fff;
+}
+
+.redstop-dark-mode .redstop-option-content,
+.redstop-dark-mode .redstop-option-content-inner,
+.redstop-dark-mode .redstop-option-content-iframe,
+.redstop-dark-mode .redstop-option-content-has-padding,
+.redstop-option-content-body.redstop-dark-mode {
+  /* Dark Mode */
+  background-color: #181818;
+}

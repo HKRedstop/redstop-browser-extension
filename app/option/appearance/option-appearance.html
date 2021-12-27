@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>共業Redstop - 外觀</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/library/bootstrap.min.css">
+	<link rel="stylesheet" href="../option.css">
+	<link rel="stylesheet" href="option-appearance.css">
+	<script src="/library/bootstrap.min.js"></script>
+	<script src="/constants/storage-key.js"></script>
+	<script src="/constants/browser-message.js"></script>
+	<script src="/constants/notification-position.js"></script>
+	<script src="option-appearance.js"></script>
+</head>
+
+
+<body class="redstop-option-content-body">
+	<div class="redstop-option-content-has-padding">
+
+		<!-- Menu Dark Mode -->
+		<div class="form-check redstop-option-content-checkbox-container">
+			<input id="redstop-option-appearance-menu-dark-mode-checkbox" class="form-check-input redstop-option-content-checkbox" type="checkbox" value="Y">
+			<label for="redstop-option-appearance-menu-dark-mode-checkbox" class="form-check-label redstop-option-content-checkbox-label">黑暗模式 (選單)</label>
+		</div>
+
+		<!-- Notification Dark Mode -->
+		<div class="form-check redstop-option-content-checkbox-container">
+			<input id="redstop-option-appearance-notification-dark-mode-checkbox" class="form-check-input redstop-option-content-checkbox" type="checkbox" value="Y">
+			<label for="redstop-option-appearance-notification-dark-mode-checkbox" class="form-check-label redstop-option-content-checkbox-label">黑暗模式 (通知)</label>
+		</div>
+
+		<hr class="redstop-option-content-hr">
+
+
+		<!-- Notification Position -->
+		<label class="redstop-option-content-label">通知位置</label>
+
+		<div class="redstop-option-appearance-position-container redstop-option-appearance-position-desktop-container">
+			<div class="redstop-option-appearance-position-row">
+				<input id="redstop-option-appearance-position-desktop-radio-tl" name="redstop-option-appearance-position-desktop-radio"
+						class="redstop-option-appearance-position-radio redstop-option-appearance-position-desktop-radio redstop-option-appearance-position-desktop-radio-tl"
+						type="radio" value="tl">
+				<input id="redstop-option-appearance-position-desktop-radio-tm" name="redstop-option-appearance-position-desktop-radio"
+						class="redstop-option-appearance-position-radio redstop-option-appearance-position-desktop-radio redstop-option-appearance-position-desktop-radio-tm"
+						type="radio" value="tm">
+				<input id="redstop-option-appearance-position-desktop-radio-tr" name="redstop-option-appearance-position-desktop-radio"
+						class="redstop-option-appearance-position-radio redstop-option-appearance-position-desktop-radio redstop-option-appearance-position-desktop-radio-tr"
+						type="radio" value="tr">
+			</div>
+			<div class="redstop-option-appearance-position-row">
+				<input id="redstop-option-appearance-position-desktop-radio-bl" name="redstop-option-appearance-position-desktop-radio"
+						class="redstop-option-appearance-position-radio redstop-option-appearance-position-desktop-radio redstop-option-appearance-position-desktop-radio-bl"
+						type="radio" value="bl">
+				<input id="redstop-option-appearance-position-desktop-radio-bm" name="redstop-option-appearance-position-desktop-radio"
+						class="redstop-option-appearance-position-radio redstop-option-appearance-position-desktop-radio redstop-option-appearance-position-desktop-radio-bm"
+						type="radio" value="bm">
+				<input id="redstop-option-appearance-position-desktop-radio-br" name="redstop-option-appearance-position-desktop-radio"
+						class="redstop-option-appearance-position-radio redstop-option-appearance-position-desktop-radio redstop-option-appearance-position-desktop-radio-br"
+						type="radio" value="br">
+			</div>
+		</div>
+
+		<div class="redstop-option-appearance-position-container redstop-option-appearance-position-mobile-container">
+			<div class="redstop-option-appearance-position-row">
+				<input id="redstop-option-appearance-position-mobile-radio-t" name="redstop-option-appearance-position-mobile-radio"
+						class="redstop-option-appearance-position-radio redstop-option-appearance-position-mobile-radio redstop-option-appearance-position-mobile-radio-t"
+						type="radio" value="t">
+				<input id="redstop-option-appearance-position-mobile-radio-b" name="redstop-option-appearance-position-mobile-radio"
+						class="redstop-option-appearance-position-radio redstop-option-appearance-position-mobile-radio redstop-option-appearance-position-mobile-radio-b"
+						type="radio" value="b">
+			</div>
+		</div>
+
+		<hr class="redstop-option-content-hr">
+
+		<!-- Auto Hide -->
+		<div class="form-check redstop-option-content-checkbox-container">
+			<input id="redstop-option-appearance-auto-hide-checkbox" class="form-check-input redstop-option-content-checkbox" type="checkbox" value="Y">
+			<label for="redstop-option-appearance-auto-hide-checkbox" class="form-check-label redstop-option-content-checkbox-label">自動隱藏通知</label>
+		</div>
+
+		<div id="redstop-option-appearance-auto-hide-time-container" class="redstop-option-appearance-auto-hide-time-container">
+			<span>( 顯示時間：</span>
+			<input id="redstop-option-appearance-auto-hide-time" class="redstop-option-content-input-text redstop-option-appearance-auto-hide-time" type="text" maxlength="2">
+			<span>秒 )</span>
+		</div>
+
+	</div>
+</body>
+
+</html>

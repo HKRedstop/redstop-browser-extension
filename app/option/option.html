@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>共業Redstop</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/library/bootstrap.min.css">
+	<link rel="stylesheet" href="option.css">
+	<script src="/library/bootstrap.min.js"></script>
+	<script src="/constants/storage-key.js"></script>
+	<script src="/constants/connection-port.js"></script>
+	<script src="/constants/browser-message.js"></script>
+	<script src="/constants/option-tab.js"></script>
+	<script src="option.js"></script>
+</head>
+
+
+<body class="redstop-option-body">
+
+	<!-- Tab -->
+	<nav id="redstop-option-tab" class="nav nav-tabs redstop-option-tab" role="tablist">
+
+		<!-- Tab: Function -->
+		<button id="redstop-option-tab-function" class="nav-link redstop-option-tab-button" type="button" role="tab"
+				data-bs-toggle="tab" data-bs-target="#redstop-option-content-function"
+				aria-controls="redstop-option-content-function" aria-selected="false">功能</button>
+
+		<!-- Tab: Appearance -->
+		<button id="redstop-option-tab-appearance" class="nav-link redstop-option-tab-button" type="button" role="tab"
+				data-bs-toggle="tab" data-bs-target="#redstop-option-content-appearance"
+				aria-controls="redstop-option-content-appearance" aria-selected="false">外觀</button>
+
+		<!-- Tab: Except Site -->
+		<button id="redstop-option-tab-except-site" class="nav-link redstop-option-tab-button" type="button" role="tab"
+				data-bs-toggle="tab" data-bs-target="#redstop-option-content-except-site"
+				aria-controls="redstop-option-content-except-site" aria-selected="false">略過名單</button>
+
+	</nav>
+
+
+	<!-- Content -->
+	<div id="redstop-option-content" class="tab-content redstop-option-content">
+
+		<!-- Content: Function -->
+	  <div id="redstop-option-content-function" class="tab-pane fade redstop-option-content-inner" role="tabpanel" aria-labelledby="redstop-option-tab-function">
+			<iframe id="redstop-option-content-function-iframe" class="redstop-option-content-iframe" src="function/option-function.html"></iframe>
+		</div>
+
+		<!-- Content: Appearance -->
+	  <div id="redstop-option-content-appearance" class="tab-pane fade redstop-option-content-inner" role="tabpanel" aria-labelledby="redstop-option-tab-appearance">
+			<iframe id="redstop-option-content-appearance-iframe" class="redstop-option-content-iframe" src="appearance/option-appearance.html"></iframe>
+		</div>
+
+		<!-- Content: Except Site -->
+	  <div id="redstop-option-content-except-site" class="tab-pane fade redstop-option-content-inner" role="tabpanel" aria-labelledby="redstop-option-tab-except-site">
+			<iframe id="redstop-option-content-except-site-iframe" class="redstop-option-content-iframe" src="except-site/option-except-site.html"></iframe>
+		</div>
+
+	</div>
+
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>共業Redstop - 功能</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/library/bootstrap.min.css">
+	<link rel="stylesheet" href="../option.css">
+	<link rel="stylesheet" href="option-function.css">
+	<script src="/library/bootstrap.min.js"></script>
+	<script src="/constants/storage-key.js"></script>
+	<script src="/constants/browser-message.js"></script>
+	<script src="option-function.js"></script>
+</head>
+
+
+<body class="redstop-option-content-body">
+	<div class="redstop-option-content-has-padding">
+
+	  <!-- Wiki -->
+	  <div class="form-check redstop-option-content-checkbox-container">
+	    <input id="redstop-option-function-wiki-checkbox" class="form-check-input redstop-option-content-checkbox" type="checkbox" value="Y">
+	    <label for="redstop-option-function-wiki-checkbox" class="form-check-label redstop-option-content-checkbox-label">Wikipedia</label>
+	  </div>
+
+	  <!-- Facebook -->
+	  <div class="form-check redstop-option-content-checkbox-container">
+	    <input id="redstop-option-function-facebook-checkbox" class="form-check-input redstop-option-content-checkbox" type="checkbox" value="Y">
+	    <label for="redstop-option-function-facebook-checkbox" class="form-check-label redstop-option-content-checkbox-label">Facebook</label>
+	  </div>
+
+	  <!-- IG -->
+	  <div class="form-check redstop-option-content-checkbox-container">
+	    <input id="redstop-option-function-ig-checkbox" class="form-check-input redstop-option-content-checkbox" type="checkbox" value="Y">
+	    <label for="redstop-option-function-ig-checkbox" class="form-check-label redstop-option-content-checkbox-label">Instagram</label>
+	  </div>
+
+	  <!-- Twitter -->
+	  <div class="form-check redstop-option-content-checkbox-container">
+	    <input id="redstop-option-function-twitter-checkbox" class="form-check-input redstop-option-content-checkbox" type="checkbox" value="Y">
+	    <label for="redstop-option-function-twitter-checkbox" class="form-check-label redstop-option-content-checkbox-label">Twitter</label>
+	  </div>
+
+	  <!-- Openrice -->
+	  <div class="form-check redstop-option-content-checkbox-container">
+	    <input id="redstop-option-function-openrice-checkbox" class="form-check-input redstop-option-content-checkbox" type="checkbox" value="Y">
+	    <label for="redstop-option-function-openrice-checkbox" class="form-check-label redstop-option-content-checkbox-label">Openrice</label>
+	  </div>
+
+	  <!-- iOS -->
+	  <div class="form-check redstop-option-content-checkbox-container">
+	    <input id="redstop-option-function-ios-checkbox" class="form-check-input redstop-option-content-checkbox" type="checkbox" value="Y">
+	    <label for="redstop-option-function-ios-checkbox" class="form-check-label redstop-option-content-checkbox-label">App Store</label>
+	  </div>
+
+	  <!-- Android -->
+	  <div class="form-check redstop-option-content-checkbox-container">
+	    <input id="redstop-option-function-android-checkbox" class="form-check-input redstop-option-content-checkbox" type="checkbox" value="Y">
+	    <label for="redstop-option-function-android-checkbox" class="form-check-label redstop-option-content-checkbox-label">Google Play</label>
+	  </div>
+
+	  <!-- Steam -->
+	  <div class="form-check redstop-option-content-checkbox-container">
+	    <input id="redstop-option-function-steam-checkbox" class="form-check-input redstop-option-content-checkbox" type="checkbox" value="Y">
+	    <label for="redstop-option-function-steam-checkbox" class="form-check-label redstop-option-content-checkbox-label">Steam</label>
+	  </div>
+
+	  <!-- PS -->
+	  <div class="form-check redstop-option-content-checkbox-container">
+	    <input id="redstop-option-function-ps-checkbox" class="form-check-input redstop-option-content-checkbox" type="checkbox" value="Y">
+	    <label for="redstop-option-function-ps-checkbox" class="form-check-label redstop-option-content-checkbox-label">PlayStation</label>
+	  </div>
+
+	  <!-- Xbox -->
+	  <div class="form-check redstop-option-content-checkbox-container">
+	    <input id="redstop-option-function-xbox-checkbox" class="form-check-input redstop-option-content-checkbox" type="checkbox" value="Y">
+	    <label for="redstop-option-function-xbox-checkbox" class="form-check-label redstop-option-content-checkbox-label">Xbox</label>
+	  </div>
+
+	  <!-- Switch -->
+	  <div class="form-check redstop-option-content-checkbox-container">
+	    <input id="redstop-option-function-switch-checkbox" class="form-check-input redstop-option-content-checkbox" type="checkbox" value="Y">
+	    <label for="redstop-option-function-switch-checkbox" class="form-check-label redstop-option-content-checkbox-label">Switch</label>
+	  </div>
+
+		<hr class="redstop-option-content-hr">
+
+		<!-- Check Domain CN -->
+	  <div class="form-check redstop-option-content-checkbox-container">
+	    <input id="redstop-option-function-check-domain-cn-checkbox" class="form-check-input redstop-option-content-checkbox" type="checkbox" value="Y">
+	    <label for="redstop-option-function-check-domain-cn-checkbox" class="form-check-label redstop-option-content-checkbox-label">檢查網域名稱是否中國.cn</label>
+	  </div>
+
+		<!-- Check China ICP -->
+	  <div class="form-check redstop-option-content-checkbox-container">
+	    <input id="redstop-option-function-check-china-icp-checkbox" class="form-check-input redstop-option-content-checkbox" type="checkbox" value="Y">
+	    <label for="redstop-option-function-check-china-icp-checkbox" class="form-check-label redstop-option-content-checkbox-label">檢查網站內容是否含有中國網安備或ICP備</label>
+	  </div>
+
+		<hr class="redstop-option-content-hr">
+
+		<!-- Manual Update Database -->
+		<div class="form-check redstop-option-content-checkbox-container">
+			<button id="redstop-option-function-update-db-button" class="btn redstop-option-content-button redstop-option-content-button-primary" type="button">
+				<span class="redstop-option-content-button-loading-text">更新中...</span>
+				<span class="redstop-option-content-button-text">更新資料庫</span>
+			</button>
+		</div>
+
+		<!-- Database Last Update Time -->
+		<div class="redstop-option-content-label">
+			<span>最後更新時間：</span>
+			<span id="redstop-option-function-db-last-update-time"></span>
+		</div>
+		<div class="redstop-option-content-remark">* 資料庫會每日自動更新</div>
+
+	</div>
+</body>
+
+</html>
