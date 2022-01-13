@@ -17,8 +17,9 @@
 
 ## Screenshots
 
-![alt text](https://addons.mozilla.org/user-media/previews/thumbs/258/258242.jpg?modified=1624574669)
-![alt text](https://addons.mozilla.org/user-media/previews/thumbs/258/258243.jpg?modified=1624574670)
-![alt text](https://addons.mozilla.org/user-media/previews/thumbs/258/258244.jpg?modified=1624574669)
-![alt text](https://addons.mozilla.org/user-media/previews/thumbs/258/258245.jpg?modified=1624574669)
-![alt text](https://addons.mozilla.org/user-media/previews/thumbs/258/258246.jpg?modified=1624574669)
+![alt text](https://addons.mozilla.org/user-media/previews/full/258/258242.png)
+![alt text](https://addons.mozilla.org/user-media/previews/full/258/258243.png)
+![alt text](https://addons.mozilla.org/user-media/previews/full/265/265413.png)
+![alt text](https://addons.mozilla.org/user-media/previews/full/265/265414.png)
+![alt text](https://addons.mozilla.org/user-media/previews/full/258/258245.png)
+![alt text](https://addons.mozilla.org/user-media/previews/full/258/258246.png)
