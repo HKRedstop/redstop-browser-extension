@@ -16,6 +16,7 @@ class BrowserMessage {
   // Background - Content
   static BC_SHOW_NOTIFICATION() { return 'REDSTOP_BC_SHOW_NOTIFICATION'; }
   static BC_CHECK_CONTENT() { return 'REDSTOP_BC_CHECK_CONTENT'; }
+  static BC_SELECTION() { return 'REDSTOP_BC_SELECTION'; }
 
   // Background - Option
   static BO_UPDATE_DB_START() { return 'REDSTOP_BO_UPDATE_DB_START'; }

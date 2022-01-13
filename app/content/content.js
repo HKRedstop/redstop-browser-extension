@@ -15,6 +15,20 @@
   });
 
 
+	/* Selection Event */
+	document.addEventListener('selectionchange', function() {
+		const selection = window.getSelection().toString().trim();
+
+		// prevent extension updated and lose connection
+		if (chrome.runtime?.id) {
+			chrome.runtime.sendMessage({
+				code: BrowserMessage.BC_SELECTION(),
+				selection: selection
+			});
+		}
+	});
+
+
 	/* Check Content */
 	function checkContent(domain, isDarkMode, checkDomainCn, checkChinaIcp) {
 		const messages = [];

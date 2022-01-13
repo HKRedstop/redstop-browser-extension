@@ -3,7 +3,7 @@
 
 	"name": "共業Redstop",
 	"description": "透過「共業Redstop」檢查網頁",
-	"version": "2.2",
+	"version": "2.3",
 	"author": "nt Redize",
 
 	"icons": {
@@ -16,6 +16,7 @@
 	"permissions": [
     "tabs",
 		"storage",
+		"contextMenus",
     "https://api.redstop.info/*",
     "https://image.redstop.info/*"
   ],
@@ -40,6 +41,7 @@
 		"scripts": [
 			"constants/storage-key.js",
 			"constants/connection-port.js",
+			"constants/context-menu-id.js",
 			"constants/browser-message.js",
 			"constants/notification-position.js",
 			"app/background/db/db-helper.js",

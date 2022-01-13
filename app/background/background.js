@@ -13,6 +13,7 @@
   const isTabGoogleMap = {};
   const tabOnLoadTimeMap = {};
   let isRefreshingData = false;
+  let selectContextMenuId = null;
 
 
   /* Init Storage */
@@ -140,7 +141,7 @@
   });
 
 
-  /* Connect Popup */
+  // 1. Connect Popup
   function connectPopup(port) {
     port.onMessage.addListener(function(msg) {
       // update browser icon when enable / disable
@@ -165,7 +166,7 @@
       // open website
       // open website suggestion
       else if (msg.code === BrowserMessage.PB_OPEN_WEBSITE() || msg.code === BrowserMessage.PB_OPEN_SUGGESTION()) {
-        openWebsite(msg.code);
+        openWebsiteByPopup(msg.code);
 
         // call popup to close
         port.postMessage({
@@ -176,7 +177,7 @@
   }
 
 
-  /* Connect Option */
+  // 2. Connect Option
   function connectOption(port) {
     port.onMessage.addListener(function(msg) {
       // manual update db
@@ -209,8 +210,50 @@
   }
 
 
+  /* Connect Content */
+  chrome.runtime.onMessage.addListener(function(msg) {
+    if (msg.code === BrowserMessage.BC_SELECTION()) updateSelectionContextMenu(msg.selection);
+  });
+
+  function updateSelectionContextMenu(selection) {
+    // remove all \n and long space
+    selection - selection.replaceAll(/\s\s+/g, ' ')
+
+    // show selection search context menu
+    // 1. not empty
+    // 2. max length 50
+    if (selection && selection.length < 50) setupSelectionContextMenu(selection);
+    else removeSelectContextMenu();
+  }
+
+  function setupSelectionContextMenu(selection) {
+    // build context menu option
+    const displaySelection = selection.length > 25 ? selection.substring(0, 25) + '...' : selection;
+    const options = {
+      "title": "透過共業REDSTOP搜尋「" + displaySelection + "」",
+      "type": "normal",
+      "contexts": ['selection'],
+      "onclick": function() { openWebsiteForSearch(selection); }
+    }
+
+    // create or update context menu
+    if (selectContextMenuId) chrome.contextMenus.update(selectContextMenuId, options);
+    else {
+      options['id'] = ContextMenuId.SELECTION();
+      selectContextMenuId = chrome.contextMenus.create(options);
+    }
+  }
+
+  function removeSelectContextMenu() {
+    if (selectContextMenuId) {
+      chrome.contextMenus.remove(selectContextMenuId);
+      selectContextMenuId = null;
+    }
+  }
+
+
   /* On Page Load */
-  chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
+  chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
     // to prevent flash due to multi changeInfo when scroll, diff time should be more than 100ms
     if (changeInfo.status == 'complete' && (!tabOnLoadTimeMap[tabId] || new Date() - tabOnLoadTimeMap[tabId] > 100)) {
       checkStorage(tabId, tab);
@@ -308,11 +351,24 @@
     });
   }
 
-  function openWebsite(code) {
+
+  /* Open Website */
+  function openWebsiteByPopup(code) {
     var url;
     if (code === BrowserMessage.PB_OPEN_WEBSITE()) url = 'https://www.redstop.info';
     else if (code === BrowserMessage.PB_OPEN_SUGGESTION()) url = 'https://www.redstop.info/suggestion';
 
+    openWebsite(url);
+  }
+
+  function openWebsiteForSearch(searchText) {
+    if (searchText) {
+      const url = 'https://www.redstop.info/search?keyword=' + encodeURIComponent(searchText);
+      openWebsite(url);
+    }
+  }
+
+  function openWebsite(url) {
     if (url) {
       chrome.tabs.create({
         url: url
