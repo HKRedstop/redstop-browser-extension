@@ -254,13 +254,16 @@
 
   /* On Page Load */
   chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
-    // to prevent flash due to multi changeInfo when scroll, diff time should be more than 100ms
-    if (changeInfo.status == 'complete' && (!tabOnLoadTimeMap[tabId] || new Date() - tabOnLoadTimeMap[tabId] > 100)) {
-      checkStorage(tabId, tab);
-    }
+    if (changeInfo.status == 'complete') {
+      // 1. to prevent flash due to multi changeInfo when scroll, diff time should be more than 100ms
+      // 2. wiki may redirect url to create two changeInfo, ignore diff time for wiki
+      if (!tabOnLoadTimeMap[tabId] || new Date() - tabOnLoadTimeMap[tabId] > 100 || urlService.isWiki(tab.url)) {
+        checkStorage(tabId, tab);
+      }
 
-    // reset onload time for tab
-    if (changeInfo.status == 'complete') tabOnLoadTimeMap[tabId] = new Date();
+      // reset onload time for tab
+      tabOnLoadTimeMap[tabId] = new Date();
+    }
   });
 
   function checkStorage(tabId, tab) {

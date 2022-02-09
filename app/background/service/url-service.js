@@ -129,9 +129,15 @@ class UrlService {
   }
 
 
+  /* Special Rule: Wiki */
+  isWiki(url) {
+    return url.match(/^(https?\:\/\/)?[a-z0-9\-_]+.wikipedia\.org\/.+$/i);
+  }
+
+
   /* Special Rule: Google Map */
   isGoogleMap(url) {
-    return url.match(/^(https?\:\/\/)?www.google.com(\.[A-Za-z]+)?\/maps\/.+$/i);
+    return url.match(/^(https?\:\/\/)?www\.google\.com(\.[A-Za-z]+)?\/maps\/.+$/i);
   }
 
 
