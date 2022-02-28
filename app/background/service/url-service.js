@@ -82,11 +82,11 @@ class UrlService {
 
       // switch app:
       // (www|store).nintendo.com.hk/switch?/{id}
-      // www.nintendo.com/{language}?/(games/detail|{name}/titles)/{id}
+      // www.nintendo.com/{language}?/(games/detail|{name}/titles|store/products)/{id}
       // www.nintendo.co.uk/games/{systemType}/{id}.html
       // store-jp.nintendo.com/list/software/{id}.html
       var switchAppId = this.extractExtension(domain, param, 'nintendo.com.hk', /^(switch\/)?([^\/\?\#]+)([\/\?\#].*)?$/i, 2);
-      if (!switchAppId) switchAppId = this.extractExtension(domain, param, 'nintendo.com', /^([a-z0-9\_\-]+\/)?(games\/detail|[^\/]+\/titles)\/([^\/\?\#]+)([\/\?\#].*)?$/i, 3);
+      if (!switchAppId) switchAppId = this.extractExtension(domain, param, 'nintendo.com', /^([a-z0-9\_\-]+\/)?(games\/detail|[^\/]+\/titles|store\/products)\/([^\/\?\#]+)([\/\?\#].*)?$/i, 3);
       if (!switchAppId) switchAppId = this.extractExtension(domain, param, 'nintendo.co.uk', /^games\/[^\/]+\/([^\/\?\#\.]+)\.html([\/\?\#].*)?$/i, 1);
       if (!switchAppId) switchAppId = this.extractExtension(domain, param, 'store-jp.nintendo.com', /^list\/software\/([^\/\?\#\.]+)\.html([\/\?\#].*)?$/i, 1);
       if (switchAppId) data.switchAppId = switchAppId;

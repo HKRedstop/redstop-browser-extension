@@ -7,8 +7,6 @@ class CheckDataService {
   }
 
   async checkPage(data) {
-    const codeList = [];
-
     try {
       // build value key to db table scheme map
       const schemaMap = {
@@ -39,12 +37,8 @@ class CheckDataService {
       const db = await this.dbHelper.openDb();
       const transaction = db.transaction(tableList);
 
-      // check website
-      if ('website' in data) {
-
-      }
-
       // checking
+      const codeList = [];
       for (const key of Object.keys(schemaMap)) {
         if (key in data) {
           var valueList = []

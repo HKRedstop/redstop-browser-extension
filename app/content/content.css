@@ -307,8 +307,8 @@
 
 .redstop-name {
   display: block !important;
-  font-family: Roboto, Helvetica Neue, sans-serif;
-  font-size: 15px;
+  font-family: Roboto, Helvetica Neue, sans-serif !important;
+  font-size: 15px !important;
   font-weight: normal;
   font-style: normal;
   font-variant: normal;
@@ -326,7 +326,7 @@
 
 @media only screen and (min-width: 576px) {
   .redstop-name {
-    font-size: 16px;
+    font-size: 16px !important;
     line-height: 1.5;
   }
 }
@@ -334,8 +334,8 @@
 .redstop-sub-name {
   display: block !important;
   padding-top: 3px;
-  font-family: Roboto, Helvetica Neue, sans-serif;
-  font-size: 9px;
+  font-family: Roboto, Helvetica Neue, sans-serif !important;
+  font-size: 9px !important;
   font-weight: normal;
   font-style: normal;
   font-variant: normal;
@@ -353,7 +353,7 @@
 
 @media only screen and (min-width: 576px) {
   .redstop-sub-name {
-    font-size: 8px;
+    font-size: 8px !important;
     line-height: 1.3;
   }
 }
